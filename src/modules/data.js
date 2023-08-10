@@ -42,8 +42,14 @@ function getAllData() {
 
   async function getData(location) {
     try {
+      const wrapper = document.querySelector('.wrapper');
+      const loader = document.querySelector(".loader");
+      wrapper.classList.add('unscrollable');
+      loader.style.display = "block";
       const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=0d4d2e5c8434473ea8b82507232707&q=${location}&days=3&aqi=no`, { mode: 'cors' });
       const weatherData = await response.json();
+      loader.style.display = "none";
+      wrapper.classList.remove('unscrollable');
       createObject(weatherData);
     } catch (error) {
       alert(`Error fetching weather data: ${error}`);
