@@ -9,7 +9,7 @@
 /* eslint-disable no-console */
 
 import {
-  format, getDay, addDays, parse, getHours, compareAsc,
+  format, addDays, parse, getHours, compareAsc,
 } from 'date-fns';
 import { handleFahrenheit } from './dom';
 
@@ -111,7 +111,7 @@ function getAllData() {
     const placeInfoPhone = document.querySelector('.settings-position p');
     const locationName = weatherData.current.name;
     const menuDate = document.querySelector('.settings-date p');
-    const menuDay = document.querySelector(".settings-day p");
+    const menuDay = document.querySelector('.settings-day p');
 
     placeInfo.textContent = `${locationName}`;
     placeInfoPhone.textContent = `${locationName}`;
