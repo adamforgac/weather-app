@@ -9,7 +9,7 @@
 /* eslint-disable no-console */
 
 import {
-  format, addDays, parse, getHours, compareAsc,
+  format, getDay, addDays, parse, getHours, compareAsc,
 } from 'date-fns';
 import { handleFahrenheit } from './dom';
 
@@ -43,12 +43,12 @@ function getAllData() {
   async function getData(location) {
     try {
       const wrapper = document.querySelector('.wrapper');
-      const loader = document.querySelector(".loader");
+      const loader = document.querySelector('.loader');
       wrapper.classList.add('unscrollable');
-      loader.style.display = "block";
+      loader.style.display = 'block';
       const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=0d4d2e5c8434473ea8b82507232707&q=${location}&days=3&aqi=no`, { mode: 'cors' });
       const weatherData = await response.json();
-      loader.style.display = "none";
+      loader.style.display = 'none';
       wrapper.classList.remove('unscrollable');
       createObject(weatherData);
     } catch (error) {
@@ -110,9 +110,17 @@ function getAllData() {
     const placeInfo = document.querySelector('.current-location h2');
     const placeInfoPhone = document.querySelector('.settings-position p');
     const locationName = weatherData.current.name;
+    const menuDate = document.querySelector('.settings-date p');
+    const menuDay = document.querySelector(".settings-day p");
 
     placeInfo.textContent = `${locationName}`;
     placeInfoPhone.textContent = `${locationName}`;
+
+    const currentDate = new Date();
+    const formattedDate = format(currentDate, 'dd. M. yyyy');
+    const dayName = format(currentDate, 'iiii');
+    menuDate.textContent = formattedDate;
+    menuDay.textContent = dayName;
   }
 
   function getThreeDays(weatherInfo) {
