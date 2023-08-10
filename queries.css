@@ -1,3 +1,34 @@
+@media only screen and (min-width: 2000px) {
+    .average {
+        font-size: 2.5rem;
+    }
+
+    .weather-temperature h2 {
+        font-size: 6rem;
+    }
+
+    .weather-info {
+        gap: 40px;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content 1fr;
+    }
+
+    .weather-icon img {
+        width: 70%;
+    }
+
+    .weather-icon {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .weather-temperature {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 @media only screen and (max-width: 1350px) {
     .weather-temperature h2 {
         font-size: 3.7rem;
@@ -19,13 +50,10 @@
         font-size: 1.3rem;
     }
 
-    .all-days-forecast > div {
-        min-width: 204px;
-    }
-
     .weather-info {
         grid-template-rows: 0.7fr 1fr;
         grid-template-columns: 1fr;
+        align-content: space-between;
     }
 
     .weather-temperature {
@@ -37,7 +65,6 @@
     .weather-icon {
         justify-content: center;
         align-items: center;
-        margin-left: 10px;
     }
 
     .average {
@@ -92,7 +119,7 @@
 @media only screen and (max-width: 1200px) {
     .weather-temperature {
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
     }
 
@@ -116,7 +143,7 @@
     }
 
     .wrapper {
-        grid-template-rows: min-content minmax(212px, min-content) 400px;
+        grid-template-rows: min-content 1fr 500px;
     }
 
     .hour-card-icon img {
@@ -139,15 +166,52 @@
 }
 
 @media only screen and (max-width: 1050px) {
+    .bonus-information {
+        grid-template-rows: repeat(4, 60px);
+        gap: 7px;
+    }
+
+    .weather-icon {
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .weather-temperature {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .data-info {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+    }
+
+    .weather-info {
+        grid-template-columns: 0.7fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .top-banner-right {
+        display: none;
+    }
+
+
+    .settings {
+        display: flex;
+        margin-left: 15px;
+    }
+
     .all-days-forecast > div {
         min-width: none;
         width: 100%;
-        min-width: max-content;
+        grid-template-rows: 60px auto;
     }
 
     .weather-icon img {
         width: 80px;
-        margin-top: 10px;
     }
 
     .average {
@@ -159,16 +223,6 @@
         font-size: 2.5rem;
     }
 
-    .data-info {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
-
-    .data-day p {
-        margin-bottom: 5px;
-    }
-
     .city-card {
         grid-template-rows: 1fr 1fr;
         padding: 20px 25px 15px 25px;
@@ -176,8 +230,7 @@
     }
 
     .cities-forecast-cards {
-        overflow-y: auto;
-        height: 250px;
+        overflow-y: visible;
         grid-template-rows: repeat(6, 100px);
         gap: 10px;
     }
@@ -212,7 +265,10 @@
     }
 
     .wrapper {
-        grid-template-rows: min-content minmax(212px, min-content) 300px;
+        grid-template-columns: 1fr;
+        padding: 20px 35px;
+        grid-template-rows: repeat(5, min-content);
+        align-content: space-between;  
     }
 
     .hour-card-icon img {
@@ -225,6 +281,46 @@
 
     .hour-card {
         grid-template-rows: 60px auto 40px;
+    }
+
+    .button {
+        position: relative;
+        top: 50%;
+        width: 55px;
+        height: 25px;
+        margin: -20px auto 0 auto;
+        overflow: hidden;
+    }
+
+    #button-9 .knobs span {
+        top: 2px;
+        left: 2px;
+        background-color: var(--light-card);
+        z-index: 1;
+        height: 22px;
+        width: 22px;
+    }
+
+    #button-9 .knobs:after {
+        font-size: 0.8rem;
+    }
+
+    #button-9 .knobs:before {
+        font-size: 0.8rem;
+        left: 1px;
+        top: -2px;
+    }
+
+    #button-9 .checkbox:checked + .knobs span {
+        left: 31px;
+        background-color: var(--light-card);
+        height: 22px;
+        width: 22px;
+    }
+
+    #button-9 .checkbox:checked + .knobs:after {
+        left: 30px;
+        top: -2px
     }
 }
 
@@ -288,59 +384,8 @@
 }  
 
 @media only screen and (max-width: 900px) {
-    .wrapper {
-        grid-template-columns: 1fr;
-        padding: 20px 35px;
-        grid-template-rows: min-content min-content min-content min-content min-content;
-        align-content: space-between;  
-    }
-
     .button-cover:before {
         color: transparent;
-    }
-
-    .button {
-        position: relative;
-        top: 50%;
-        width: 55px;
-        height: 25px;
-        margin: -20px auto 0 auto;
-        overflow: hidden;
-    }
-
-    #button-9 .knobs span {
-        top: 2px;
-        left: 2px;
-        background-color: var(--light-card);
-        z-index: 1;
-        height: 22px;
-        width: 22px;
-    }
-
-    #button-9 .knobs:after {
-        font-size: 0.8rem;
-    }
-
-    #button-9 .knobs:before {
-        font-size: 0.8rem;
-        left: 1px;
-        top: -2px;
-    }
-
-    #button-9 .checkbox:checked + .knobs span {
-        left: 31px;
-        background-color: var(--light-card);
-        height: 22px;
-        width: 22px;
-    }
-
-    #button-9 .checkbox:checked + .knobs:after {
-        left: 30px;
-        top: -2px
-    }
-
-    .all-days-forecast > div {
-        grid-template-rows: 60px auto;
     }
 
     .top-banner-right {
@@ -351,11 +396,6 @@
         display: flex;
     }
 
-    .bonus-information {
-        grid-template-rows: repeat(4, 60px);
-        gap: 7px;
-    }
-
     .cities-forecast-cards {
         overflow-y: visible;
         grid-template-rows: repeat(3, 100px);
@@ -363,26 +403,9 @@
         gap: 15px;
     }
 
-    .settings {
-        display: flex;
-        margin-left: 15px;
-    }
-
-    .weather-info {
-        grid-template-columns: 0.7fr 1fr;
-        grid-template-rows: 1fr;
-    }
-
     .weather-temperature {
         justify-content: center;
         align-items: center;
-    }
-
-    .data-info {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0;
     }
 
     .data-day p {
@@ -390,7 +413,13 @@
     }
 
     .all-days-forecast > div {
-        grid-template-rows: 55apx auto;
+        grid-template-rows: 55px auto;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .weather-icon img {
+        width: 70px;
     }
 }
 
@@ -409,7 +438,7 @@
     }
 
     .weather-icon img {
-        width: 70px;
+        width: 60px;
         margin-top: 0px;
     }
 
@@ -446,10 +475,6 @@
         margin-bottom: 5px;
     }
 
-    .weather-temperature {
-        transform: translateX(5px);
-    }
-
     .weather-info {
         display: flex;
         flex-direction: column;
@@ -459,38 +484,16 @@
     .weather-icon img {
         width: 50px;
     }
+
+    .weather-icon {
+        justify-content: center;
+    }
 }
 
 @media only screen and (max-width: 540px) {
-    .all-days-forecast{
-        display: grid;
-        grid-template-rows: repeat(3, 1fr);  
-        grid-template-columns: 1fr;  
-        gap: 20px;
-        justify-items: center;
-    }
-
     .weather-info {
         display: grid;
         grid-template-columns: 0.7fr 1fr;
-    }
-
-    .bonus-forecast {
-        display: none;
-    }
-
-    .weather-forecast {
-        display: grid;
-        grid-template-columns: min-content 1fr;
-        gap: 20px;
-    }
-
-    .bonus-forecast-mobile {
-        display: grid;
-    }
-
-    .bonus-information {
-        grid-template-rows: repeat(4, 1fr);
     }
 
     .all-hour-cards {
@@ -524,17 +527,15 @@
     }
 }
 
-@media only screen and (max-width: 485px) {
-    .stat-info p {
-        font-size: 0.85rem;
+@media only screen and (max-width: 530px) {
+    .all-days-forecast{
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);  
+        grid-template-columns: 1fr;  
+        gap: 20px;
+        justify-items: center;
     }
 
-    .bonus-text p {
-        font-size: 0.75rem;
-    }
-}
-
-@media only screen and (max-width: 470px) {
     .bonus-forecast {
         display: grid;
     }
@@ -547,10 +548,6 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 20px;
-    }
-
-    .bonus-forecast-mobile {
-        display: none;
     }
 
     .bonus-information {
@@ -636,6 +633,16 @@
     .settings {
         display: flex;
         margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 485px) {
+    .stat-info p {
+        font-size: 0.85rem;
+    }
+
+    .bonus-text p {
+        font-size: 0.75rem;
     }
 }
 

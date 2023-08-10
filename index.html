@@ -24,13 +24,14 @@
             </div>
 
             <div class="settings">
-                <i class="fa-solid fa-gear"></i>
+                <i class="fa-solid fa-compass"></i>
             </div>
         </div>
 
         <div class="top-banner-right">
             <div class="current-location">
-                <h2><i class="fa-solid fa-location-dot"></i> Seattle, Australia</h2>
+                <i class="fa-solid fa-location-dot"></i>
+                <h2>Seattle, Australia</h2>
             </div>
 
             <div class="toggle-button-cover">
@@ -54,19 +55,19 @@
                             <p class="date-day1">Monday</p>
                         </div>
     
-                        <div class="data-time">
-                            <p class="time-day1">5. 4</p>
+                        <div class="data-date">
+                            <p class="data-date1">5. 4</p>
                         </div>
                     </div>
     
                     <div class="weather-info">
                         <div class="weather-temperature">
-                            <h2 class="weather-day1">16°</h2>
+                            <h2 class="weather-day1 celsius">16°</h2>
                             <p class="average">AVG</p>
                         </div>
     
                         <div class="weather-icon">
-                            <img src="images/tryout1.png" alt="">
+                            <img class="weather-image-day1" src="" alt="">
                         </div>
                     </div>
                 </div>
@@ -78,18 +79,18 @@
                         </div>
     
                         <div class="data-date">
-                            <p class="date-day2">5. 5</p>
+                            <p class="data-date2">5. 5</p>
                         </div>
                     </div>
     
                     <div class="weather-info">
                         <div class="weather-temperature">
-                            <h2 class="weather-day2">22°</h2>
+                            <h2 class="weather-day2 celsius">22°</h2>
                             <p class="average">AVG</p>
                         </div>
     
                         <div class="weather-icon">
-                            <img class="weather-image-day2" src="images/rain-only-resized.png" alt="">
+                            <img class="weather-image-day2" src="" alt="">
                         </div>
                     </div>
                 </div>
@@ -101,66 +102,18 @@
                         </div>
     
                         <div class="data-date">
-                            <p class="date-day3">5. 6</p>
+                            <p class="data-date3">5. 6</p>
                         </div>
                     </div>
     
                     <div class="weather-info">
                         <div class="weather-temperature">
-                            <h2 class="weather-day3">16°</h2>
+                            <h2 class="weather-day3 celsius">16°</h2>
                             <p class="average">AVG</p>
                         </div>
     
                         <div class="weather-icon">
-                            <img src="images/tryout2.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bonus-forecast-mobile">
-                <div class="bonus-header">
-                    <h2>Today's overview</h2>
-                </div>
-    
-                <div class="bonus-information">
-                    <div class="max-temperature">
-                        <div class="bonus-text">
-                            <p>Max temperature</p>
-                        </div>
-    
-                        <div class="max-temperature-stat stat-info">
-                            <p class="max-temperature-num">21°</p>
-                        </div>
-                    </div>
-    
-                    <div class="min-temperature">
-                        <div class="bonus-text">
-                            <p>Min temperature</p>
-                        </div>
-    
-                        <div class="min-temperature-stat stat-info">
-                            <p class="min-temperature-num">10°</p>
-                        </div>
-                    </div>
-                    
-                    <div class="feels-like">
-                        <div class="bonus-text">
-                            <p>Feels like</p>
-                        </div>
-    
-                        <div class="feels-like-stat stat-info">
-                            <p class="feels-like-num">12°</p>
-                        </div>
-                    </div>
-    
-                    <div class="wind-speed">
-                        <div class="bonus-text">
-                            <p>Wind speed</p>
-                        </div>
-    
-                        <div class="wind-speed-stat stat-info">
-                            <p class="wind-speed-num">50 km/h</p>
+                            <img class="weather-image-day3" src="" alt="">
                         </div>
                     </div>
                 </div>
@@ -169,27 +122,27 @@
 
         <div class="bonus-forecast">
             <div class="bonus-header">
-                <h2>Today's overview</h2>
+                <h2>Current overview</h2>
             </div>
 
             <div class="bonus-information">
-                <div class="max-temperature">
+                <div class="visibility">
                     <div class="bonus-text">
-                        <p>Max temperature</p>
+                        <p>Visibility</p>
                     </div>
 
-                    <div class="max-temperature-stat stat-info">
-                        <p class="max-temperature-num">21°</p>
+                    <div class="visibility-stat stat-info">
+                        <p class="visibility-num">10 km</p>
                     </div>
                 </div>
 
-                <div class="min-temperature">
+                <div class="pressure">
                     <div class="bonus-text">
-                        <p>Min temperature</p>
+                        <p>Preassure</p>
                     </div>
 
-                    <div class="min-temperature-stat stat-info">
-                        <p class="min-temperature-num">10°</p>
+                    <div class="pressure-stat stat-info">
+                        <p class="pressure-num"></p>
                     </div>
                 </div>
                 
@@ -199,7 +152,7 @@
                     </div>
 
                     <div class="feels-like-stat stat-info">
-                        <p class="feels-like-num">12°</p>
+                        <p class="feels-like-num celsius"></p>
                     </div>
                 </div>
 
@@ -209,7 +162,7 @@
                     </div>
 
                     <div class="wind-speed-stat stat-info">
-                        <p class="wind-speed-num">50 km/h</p>
+                        <p class="wind-speed-num"></p>
                     </div>
                 </div>
             </div>
@@ -221,159 +174,7 @@
             </div>
 
             <div class="all-hour-cards">
-                <div class="hour-card">
-                    <div class="hour-card-time">
-                        <p>14:00</p>
-                    </div>
-    
-                    <div class="hour-card-icon">
-                        <img src="images/rain-only.png" alt="">
-                    </div>
-    
-                    <div class="hour-card-temperature">
-                        <p>10°</p>
-                    </div>
-                </div> 
-    
-                <div class="hour-card">
-                    <div class="hour-card-time">
-                        <p>14:00</p>
-                    </div>
-    
-                    <div class="hour-card-icon">
-                        <img src="images/rain-only.png" alt="">
-                    </div>
-    
-                    <div class="hour-card-temperature">
-                        <p>10°</p>
-                    </div>
-                </div> 
-    
-                <div class="hour-card">
-                    <div class="hour-card-time">
-                        <p>14:00</p>
-                    </div>
-    
-                    <div class="hour-card-icon">
-                        <img src="images/rain-only.png" alt="">
-                    </div>
-    
-                    <div class="hour-card-temperature">
-                        <p>10°</p>
-                    </div>
-                </div> 
 
-                <div class="hour-card">
-                    <div class="hour-card-time">
-                        <p>14:00</p>
-                    </div>
-    
-                    <div class="hour-card-icon">
-                        <img src="images/rain-only.png" alt="">
-                    </div>
-    
-                    <div class="hour-card-temperature">
-                        <p>10°</p>
-                    </div>
-                </div> 
-
-                <div class="hour-card">
-                    <div class="hour-card-time">
-                        <p>14:00</p>
-                    </div>
-    
-                    <div class="hour-card-icon">
-                        <img src="images/rain-only.png" alt="">
-                    </div>
-    
-                    <div class="hour-card-temperature">
-                        <p>10°</p>
-                    </div>
-                </div> 
-
-                <div class="hour-card">
-                    <div class="hour-card-time">
-                        <p>14:00</p>
-                    </div>
-    
-                    <div class="hour-card-icon">
-                        <img src="images/rain-only.png" alt="">
-                    </div>
-    
-                    <div class="hour-card-temperature">
-                        <p>10°</p>
-                    </div>
-                </div> 
-
-                <div class="hour-card">
-                    <div class="hour-card-time">
-                        <p>14:00</p>
-                    </div>
-    
-                    <div class="hour-card-icon">
-                        <img src="images/rain-only.png" alt="">
-                    </div>
-    
-                    <div class="hour-card-temperature">
-                        <p>10°</p>
-                    </div>
-                </div> 
-    
-                <div class="hour-card">
-                    <div class="hour-card-time">
-                        <p>14:00</p>
-                    </div>
-    
-                    <div class="hour-card-icon">
-                        <img src="images/rain-only.png" alt="">
-                    </div>
-    
-                    <div class="hour-card-temperature">
-                        <p>10°</p>
-                    </div>
-                </div> 
-    
-                <div class="hour-card">
-                    <div class="hour-card-time">
-                        <p>14:00</p>
-                    </div>
-    
-                    <div class="hour-card-icon">
-                        <img src="images/rain-only.png" alt="">
-                    </div>
-    
-                    <div class="hour-card-temperature">
-                        <p>10°</p>
-                    </div>
-                </div> 
-    
-                <div class="hour-card">
-                    <div class="hour-card-time">
-                        <p>14:00</p>
-                    </div>
-    
-                    <div class="hour-card-icon">
-                        <img src="images/rain-only.png" alt="">
-                    </div>
-    
-                    <div class="hour-card-temperature">
-                        <p>10°</p>
-                    </div>
-                </div> 
-    
-                <div class="hour-card">
-                    <div class="hour-card-time">
-                        <p>14:00</p>
-                    </div>
-    
-                    <div class="hour-card-icon">
-                        <img src="images/rain-only.png" alt="">
-                    </div>
-    
-                    <div class="hour-card-temperature">
-                        <p>10°</p>
-                    </div>
-                </div>
             </div>
         </div> 
 
@@ -391,12 +192,12 @@
                             </p>
 
                             <p class="other-cities-region">
-                                California
+                                New York
                             </p>
                         </div>
 
                         <div class="row-one-icon">
-                            <img src="images/sun-with-clouds.png" alt="">
+                            <img src="" alt="">
                         </div>
                     </div>
 
@@ -408,7 +209,135 @@
                         </div>
 
                         <div class="row-two-num">
-                            <p class="other-cities-temperature">
+                            <p class="other-cities-temperature celsius">
+                                31°
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="city-card">
+                    <div class="cities-row-one">
+                        <div class="row-one-text">
+                            <p class="other-cities-county">
+                                UK
+                            </p>
+
+                            <p class="other-cities-region">
+                                London
+                            </p>
+                        </div>
+
+                        <div class="row-one-icon">
+                            <img src="images/day/weather-icon-sunny.png">
+                        </div>
+                    </div>
+
+                    <div class="cities-row-two">
+                        <div class="row-two-text">
+                            <p class="other-cities-weather-text">
+                                Mostly sunny
+                            </p>
+                        </div>
+
+                        <div class="row-two-num">
+                            <p class="other-cities-temperature celsius">
+                                31°
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="city-card">
+                    <div class="cities-row-one">
+                        <div class="row-one-text">
+                            <p class="other-cities-county">
+                                France
+                            </p>
+
+                            <p class="other-cities-region">
+                                Paris
+                            </p>
+                        </div>
+
+                        <div class="row-one-icon">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+
+                    <div class="cities-row-two">
+                        <div class="row-two-text">
+                            <p class="other-cities-weather-text">
+                                Mostly sunny
+                            </p>
+                        </div>
+
+                        <div class="row-two-num">
+                            <p class="other-cities-temperature celsius">
+                                31°
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="city-card">
+                    <div class="cities-row-one">
+                        <div class="row-one-text">
+                            <p class="other-cities-county">
+                                Japan
+                            </p>
+
+                            <p class="other-cities-region">
+                                Tokyo
+                            </p>
+                        </div>
+
+                        <div class="row-one-icon">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+
+                    <div class="cities-row-two">
+                        <div class="row-two-text">
+                            <p class="other-cities-weather-text">
+                                Mostly sunny
+                            </p>
+                        </div>
+
+                        <div class="row-two-num">
+                            <p class="other-cities-temperature celsius">
+                                31°
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="city-card">
+                    <div class="cities-row-one">
+                        <div class="row-one-text">
+                            <p class="other-cities-county">
+                                China
+                            </p>
+
+                            <p class="other-cities-region">
+                                Hong Kong
+                            </p>
+                        </div>
+
+                        <div class="row-one-icon">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+
+                    <div class="cities-row-two">
+                        <div class="row-two-text">
+                            <p class="other-cities-weather-text">
+                                Mostly sunny
+                            </p>
+                        </div>
+
+                        <div class="row-two-num">
+                            <p class="other-cities-temperature celsius">
                                 31°
                             </p>
                         </div>
@@ -423,12 +352,12 @@
                             </p>
 
                             <p class="other-cities-region">
-                                California
+                                Los Angeles
                             </p>
                         </div>
 
                         <div class="row-one-icon">
-                            <img src="images/sun-with-clouds.png" alt="">
+                            <img src="" alt="">
                         </div>
                     </div>
 
@@ -440,135 +369,7 @@
                         </div>
 
                         <div class="row-two-num">
-                            <p class="other-cities-temperature">
-                                31°
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="city-card">
-                    <div class="cities-row-one">
-                        <div class="row-one-text">
-                            <p class="other-cities-county">
-                                US
-                            </p>
-
-                            <p class="other-cities-region">
-                                California
-                            </p>
-                        </div>
-
-                        <div class="row-one-icon">
-                            <img src="images/sun-with-clouds.png" alt="">
-                        </div>
-                    </div>
-
-                    <div class="cities-row-two">
-                        <div class="row-two-text">
-                            <p class="other-cities-weather-text">
-                                Mostly sunny
-                            </p>
-                        </div>
-
-                        <div class="row-two-num">
-                            <p class="other-cities-temperature">
-                                31°
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="city-card">
-                    <div class="cities-row-one">
-                        <div class="row-one-text">
-                            <p class="other-cities-county">
-                                US
-                            </p>
-
-                            <p class="other-cities-region">
-                                California
-                            </p>
-                        </div>
-
-                        <div class="row-one-icon">
-                            <img src="images/sun-with-clouds.png" alt="">
-                        </div>
-                    </div>
-
-                    <div class="cities-row-two">
-                        <div class="row-two-text">
-                            <p class="other-cities-weather-text">
-                                Mostly sunny
-                            </p>
-                        </div>
-
-                        <div class="row-two-num">
-                            <p class="other-cities-temperature">
-                                31°
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="city-card">
-                    <div class="cities-row-one">
-                        <div class="row-one-text">
-                            <p class="other-cities-county">
-                                US
-                            </p>
-
-                            <p class="other-cities-region">
-                                California
-                            </p>
-                        </div>
-
-                        <div class="row-one-icon">
-                            <img src="images/sun-with-clouds.png" alt="">
-                        </div>
-                    </div>
-
-                    <div class="cities-row-two">
-                        <div class="row-two-text">
-                            <p class="other-cities-weather-text">
-                                Mostly sunny
-                            </p>
-                        </div>
-
-                        <div class="row-two-num">
-                            <p class="other-cities-temperature">
-                                31°
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="city-card">
-                    <div class="cities-row-one">
-                        <div class="row-one-text">
-                            <p class="other-cities-county">
-                                US
-                            </p>
-
-                            <p class="other-cities-region">
-                                California
-                            </p>
-                        </div>
-
-                        <div class="row-one-icon">
-                            <img src="images/sun-with-clouds.png" alt="">
-                        </div>
-                    </div>
-
-                    <div class="cities-row-two">
-                        <div class="row-two-text">
-                            <p class="other-cities-weather-text">
-                                Mostly sunny
-                            </p>
-                        </div>
-
-                        <div class="row-two-num">
-                            <p class="other-cities-temperature">
+                            <p class="other-cities-temperature celsius">
                                 31°
                             </p>
                         </div>
