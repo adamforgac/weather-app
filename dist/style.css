@@ -77,15 +77,10 @@ table {
     padding: 20px 35px;
     row-gap: 30px;
     column-gap: 50px;
-    grid-template-rows: min-content minmax(212px, min-content) 500px;
+    grid-template-rows: min-content 1fr 500px;
     align-content: space-between;  
 }
 
-
-
-.wrapper > div {
- 
-}
 
 /* TOP-BANNER */
 /* TOP-BANNER */
@@ -119,6 +114,7 @@ table {
     position: relative;
     z-index: 100;
     width: 27px;
+    cursor: pointer;
 }
 
 .search-input input {
@@ -153,10 +149,12 @@ table {
 
 .current-location {
     margin-right: 30px;
+    display: flex;
 }
 
-.current-location h2 i {
-    margin-right: 5px;
+.current-location i {
+    margin-right: 10px;
+    color: white;
 }
 
 .current-location h2 {
@@ -336,8 +334,9 @@ table {
 
 .all-days-forecast {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);  
+    grid-template-columns: repeat(3, 1fr); 
     gap: 20px;
+    height: 100%;
 }
 
 .all-days-forecast > div {
@@ -345,6 +344,8 @@ table {
     display: grid;
     grid-template-rows: 70px auto;
     border-radius: 20px;
+    /* max-width: 400px; */
+    width: 100%;
 }
 
 .all-days-forecast > div > div {
@@ -368,7 +369,7 @@ table {
 
 .weather-icon {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     margin-left: 10px;
 }
@@ -413,15 +414,15 @@ table {
 
 .settings i {
     color: white;
+    font-size: 1.5rem;
 }
 
 .settings {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background-color: var(--card-color);
     transition: all 0.3s ease-in-out;
     cursor: pointer;
     display: none;
@@ -451,6 +452,10 @@ table {
 
 .fa-xmark {
     cursor: pointer;
+}
+
+img {
+ 
 }
 
 .visible-banner  {
@@ -508,7 +513,7 @@ table {
 }
 
 .weather-icon img {
-    width: clamp(80px, 100%, 230px);
+    width: clamp(80px, 100%, 160px);
 }
 
 .hour-forecast {
@@ -683,15 +688,6 @@ table {
     grid-template-rows: min-content auto;
     padding: 20px 23px;
     gap: 20px;
-}
-
-.bonus-forecast-mobile {
-    border-radius: 20px;
-    background-color: var(--card-color);
-    grid-template-rows: min-content auto;
-    padding: 20px 23px;
-    gap: 20px;
-    display: none;
 }
 
 .bonus-forecast > div {
