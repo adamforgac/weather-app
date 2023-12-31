@@ -204,7 +204,7 @@
         margin-left: 15px;
     }
 
-    .all-days-forecast > div {
+    .all-days-forecast > section {
         min-width: none;
         width: 100%;
         grid-template-rows: 60px auto;
@@ -412,7 +412,7 @@
         margin: 0;
     }
 
-    .all-days-forecast > div {
+    .all-days-forecast > section {
         grid-template-rows: 55px auto;
     }
 }
@@ -428,7 +428,7 @@
         font-size: 1rem;
     }
 
-    .all-days-forecast > div {
+    .all-days-forecast > section {
         grid-template-rows: 40px auto;
     }
 
@@ -442,7 +442,7 @@
         margin-top: 0px;
     }
 
-    .all-days-forecast > div > div {
+    .all-days-forecast > section > div {
         padding: 10px;
     }
 
@@ -582,7 +582,7 @@
         width: 100px;
     }
 
-    .all-days-forecast > div > div {
+    .all-days-forecast > section > div {
         padding: 20px 35px;
     }
 
@@ -641,7 +641,7 @@
         font-size: 0.85rem;
     }
 
-    .bonus-text p {
+    .bonus-information > div > p:first-child {
         font-size: 0.75rem;
     }
 }
@@ -674,7 +674,7 @@
         font-size: 2.9rem;
     }
 
-    .all-days-forecast > div > div {
+    .all-days-forecast > section > div {
         padding: 20px 25px;
     }
 }
@@ -692,7 +692,7 @@
         width: 85px;
     }
 
-    .all-days-forecast > div > div {
+    .all-days-forecast > section > div {
         padding: 20px 20px;
     }
 }
@@ -710,7 +710,7 @@
         width: 65px;
     }
 
-    .all-days-forecast > div > div {
+    .all-days-forecast > section > div {
         padding: 20px 15px;
     }
 
@@ -745,7 +745,7 @@
         font-size: 0.85rem;
     }
 
-    .bonus-text p {
+    .visibility p:first-child {
         font-size: 0.65rem;
     }
 
