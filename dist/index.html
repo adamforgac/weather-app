@@ -1,425 +1,390 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="queries.css">
-    <script src="https://kit.fontawesome.com/e4b054a4b4.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+    <script
+      src="https://kit.fontawesome.com/e4b054a4b4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>WeaDr - weather app</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="wrapper">
-        <div class="top-banner-left">
-            <div class="logo">
-                <img src="images/v5.svg" alt="">
-            </div>
-
-            <div class="search-input">
-                <img src="images/search-icon-thinner.png" alt="">
-                <input type="text" name="search" id="search" placeholder="Search city...">
-            </div>
-
-            <div class="settings">
-                <i class="fa-solid fa-compass"></i>
-            </div>
+      <div class="top-banner-left">
+        <div class="logo">
+          <img src="images/v5.svg" alt="weadr company logo" />
         </div>
 
-        <div class="top-banner-right">
-            <div class="current-location">
-                <i class="fa-solid fa-location-dot"></i>
-                <h2>Seattle, Australia</h2>
-            </div>
-
-            <div class="toggle-button-cover">
-                <div class="button-cover">
-                  <div class="button r" id="button-9">
-                    <input type="checkbox" class="checkbox" />
-                    <div class="knobs">
-                      <span></span>
-                    </div>
-                    <div class="layer"></div>
-                  </div>
-                </div>
-            </div>
+        <div class="search-input">
+          <img src="images/search-icon-thinner.png" alt="search icon" />
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Search city..."
+          />
         </div>
 
-        <div class="weather-forecast">
-            <div class="all-days-forecast">
-                <div class="day-one">
-                    <div class="data-info">
-                        <div class="data-day">
-                            <p class="date-day1">Monday</p>
-                        </div>
-    
-                        <div class="data-date">
-                            <p class="data-date1">5. 4</p>
-                        </div>
-                    </div>
-    
-                    <div class="weather-info">
-                        <div class="weather-temperature">
-                            <h2 class="weather-day1 celsius">16°</h2>
-                            <p class="average">AVG</p>
-                        </div>
-    
-                        <div class="weather-icon">
-                            <img class="weather-image-day1" src="" alt="">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="day-two">
-                    <div class="data-info">
-                        <div class="data-day">
-                            <p class="date-day2">Tuesday</p>
-                        </div>
-    
-                        <div class="data-date">
-                            <p class="data-date2">5. 5</p>
-                        </div>
-                    </div>
-    
-                    <div class="weather-info">
-                        <div class="weather-temperature">
-                            <h2 class="weather-day2 celsius">22°</h2>
-                            <p class="average">AVG</p>
-                        </div>
-    
-                        <div class="weather-icon">
-                            <img class="weather-image-day2" src="" alt="">
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="day-three">
-                    <div class="data-info">
-                        <div class="data-day">
-                            <p class="date-day3">Thursday</p>
-                        </div>
-    
-                        <div class="data-date">
-                            <p class="data-date3">5. 6</p>
-                        </div>
-                    </div>
-    
-                    <div class="weather-info">
-                        <div class="weather-temperature">
-                            <h2 class="weather-day3 celsius">16°</h2>
-                            <p class="average">AVG</p>
-                        </div>
-    
-                        <div class="weather-icon">
-                            <img class="weather-image-day3" src="" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="settings">
+          <i class="fa-solid fa-compass"></i>
+        </div>
+      </div>
+
+      <div class="top-banner-right">
+        <div class="current-location">
+          <i class="fa-solid fa-location-dot"></i>
+          <h2>Seattle, Australia</h2>
         </div>
 
-        <div class="bonus-forecast">
-            <div class="bonus-header">
-                <h2>Current overview</h2>
+        <div class="toggle-button-cover">
+          <div class="button-cover">
+            <div class="button r" id="button-9">
+              <input type="checkbox" class="checkbox" />
+              <div class="knobs">
+                <span></span>
+              </div>
+              <div class="layer"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="weather-forecast">
+        <div class="all-days-forecast">
+          <section class="day-one">
+            <div class="data-info">
+              <div class="data-day">
+                <p class="date-day1">Monday</p>
+              </div>
+
+              <div class="data-date">
+                <p class="data-date1">5. 4</p>
+              </div>
             </div>
 
-            <div class="bonus-information">
-                <div class="visibility">
-                    <div class="bonus-text">
-                        <p>Visibility</p>
-                    </div>
+            <div class="weather-info">
+              <div class="weather-temperature">
+                <h2 class="weather-day1 celsius">16°</h2>
+                <p class="average">AVG</p>
+              </div>
 
-                    <div class="visibility-stat stat-info">
-                        <p class="visibility-num">10 km</p>
-                    </div>
-                </div>
-
-                <div class="pressure">
-                    <div class="bonus-text">
-                        <p>Preassure</p>
-                    </div>
-
-                    <div class="pressure-stat stat-info">
-                        <p class="pressure-num"></p>
-                    </div>
-                </div>
-                
-                <div class="feels-like">
-                    <div class="bonus-text">
-                        <p>Feels like</p>
-                    </div>
-
-                    <div class="feels-like-stat stat-info">
-                        <p class="feels-like-num celsius"></p>
-                    </div>
-                </div>
-
-                <div class="wind-speed">
-                    <div class="bonus-text">
-                        <p>Wind speed</p>
-                    </div>
-
-                    <div class="wind-speed-stat stat-info">
-                        <p class="wind-speed-num"></p>
-                    </div>
-                </div>
+              <div class="weather-icon">
+                <img
+                  class="weather-image-day1"
+                  src=""
+                  alt="weather icon for today"
+                />
+              </div>
             </div>
+          </section>
+
+          <section class="day-two">
+            <div class="data-info">
+              <div class="data-day">
+                <p class="date-day2">Tuesday</p>
+              </div>
+
+              <div class="data-date">
+                <p class="data-date2">5. 5</p>
+              </div>
+            </div>
+
+            <div class="weather-info">
+              <div class="weather-temperature">
+                <h2 class="weather-day2 celsius">22°</h2>
+                <p class="average">AVG</p>
+              </div>
+
+              <div class="weather-icon">
+                <img
+                  class="weather-image-day2"
+                  src=""
+                  alt="weather icon for tommorow"
+                />
+              </div>
+            </div>
+          </section>
+
+          <section class="day-three">
+            <div class="data-info">
+              <div class="data-day">
+                <p class="date-day3">Thursday</p>
+              </div>
+
+              <div class="data-date">
+                <p class="data-date3">5. 6</p>
+              </div>
+            </div>
+
+            <div class="weather-info">
+              <div class="weather-temperature">
+                <h2 class="weather-day3 celsius">16°</h2>
+                <p class="average">AVG</p>
+              </div>
+
+              <div class="weather-icon">
+                <img
+                  class="weather-image-day3"
+                  src=""
+                  alt="weather icon for day after tommorow"
+                />
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div class="bonus-forecast">
+        <div class="bonus-header">
+          <h2>Current overview</h2>
         </div>
 
-        <div class="hour-forecast">
-            <div class="hour-forecast-heading">
-                <h3>Hourly forecast</h3>
-            </div>
+        <div class="bonus-information">
+          <div class="visibility">
+            <p>Visibility</p>
 
-            <div class="all-hour-cards">
+            <p></p>
+          </div>
 
-            </div>
-        </div> 
+          <div class="pressure">
+            <p>Pressure</p>
 
-        <div class="cities-forecast">
-            <div class="cities-forecast-heading">
-                <h3>Other large cities</h3>
-            </div>
+            <p></p>
+          </div>
 
-            <div class="cities-forecast-cards">
-                <div class="city-card">
-                    <div class="cities-row-one">
-                        <div class="row-one-text">
-                            <p class="other-cities-county">
-                                US
-                            </p>
+          <div class="feels-like">
+            <p>Feels like</p>
 
-                            <p class="other-cities-region">
-                                New York
-                            </p>
-                        </div>
+            <p></p>
+          </div>
 
-                        <div class="row-one-icon">
-                            <img src="" alt="">
-                        </div>
-                    </div>
+          <div class="wind-speed">
+            <p>Wind speed</p>
 
-                    <div class="cities-row-two">
-                        <div class="row-two-text">
-                            <p class="other-cities-weather-text">
-                                Mostly sunny
-                            </p>
-                        </div>
-
-                        <div class="row-two-num">
-                            <p class="other-cities-temperature celsius">
-                                31°
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="city-card">
-                    <div class="cities-row-one">
-                        <div class="row-one-text">
-                            <p class="other-cities-county">
-                                UK
-                            </p>
-
-                            <p class="other-cities-region">
-                                London
-                            </p>
-                        </div>
-
-                        <div class="row-one-icon">
-                            <img src="images/day/weather-icon-sunny.png">
-                        </div>
-                    </div>
-
-                    <div class="cities-row-two">
-                        <div class="row-two-text">
-                            <p class="other-cities-weather-text">
-                                Mostly sunny
-                            </p>
-                        </div>
-
-                        <div class="row-two-num">
-                            <p class="other-cities-temperature celsius">
-                                31°
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="city-card">
-                    <div class="cities-row-one">
-                        <div class="row-one-text">
-                            <p class="other-cities-county">
-                                France
-                            </p>
-
-                            <p class="other-cities-region">
-                                Paris
-                            </p>
-                        </div>
-
-                        <div class="row-one-icon">
-                            <img src="" alt="">
-                        </div>
-                    </div>
-
-                    <div class="cities-row-two">
-                        <div class="row-two-text">
-                            <p class="other-cities-weather-text">
-                                Mostly sunny
-                            </p>
-                        </div>
-
-                        <div class="row-two-num">
-                            <p class="other-cities-temperature celsius">
-                                31°
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="city-card">
-                    <div class="cities-row-one">
-                        <div class="row-one-text">
-                            <p class="other-cities-county">
-                                Japan
-                            </p>
-
-                            <p class="other-cities-region">
-                                Tokyo
-                            </p>
-                        </div>
-
-                        <div class="row-one-icon">
-                            <img src="" alt="">
-                        </div>
-                    </div>
-
-                    <div class="cities-row-two">
-                        <div class="row-two-text">
-                            <p class="other-cities-weather-text">
-                                Mostly sunny
-                            </p>
-                        </div>
-
-                        <div class="row-two-num">
-                            <p class="other-cities-temperature celsius">
-                                31°
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="city-card">
-                    <div class="cities-row-one">
-                        <div class="row-one-text">
-                            <p class="other-cities-county">
-                                China
-                            </p>
-
-                            <p class="other-cities-region">
-                                Hong Kong
-                            </p>
-                        </div>
-
-                        <div class="row-one-icon">
-                            <img src="" alt="">
-                        </div>
-                    </div>
-
-                    <div class="cities-row-two">
-                        <div class="row-two-text">
-                            <p class="other-cities-weather-text">
-                                Mostly sunny
-                            </p>
-                        </div>
-
-                        <div class="row-two-num">
-                            <p class="other-cities-temperature celsius">
-                                31°
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="city-card">
-                    <div class="cities-row-one">
-                        <div class="row-one-text">
-                            <p class="other-cities-county">
-                                US
-                            </p>
-
-                            <p class="other-cities-region">
-                                Los Angeles
-                            </p>
-                        </div>
-
-                        <div class="row-one-icon">
-                            <img src="" alt="">
-                        </div>
-                    </div>
-
-                    <div class="cities-row-two">
-                        <div class="row-two-text">
-                            <p class="other-cities-weather-text">
-                                Mostly sunny
-                            </p>
-                        </div>
-
-                        <div class="row-two-num">
-                            <p class="other-cities-temperature celsius">
-                                31°
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <p></p>
+          </div>
         </div>
+      </div>
+
+      <div class="hour-forecast">
+        <div class="hour-forecast-heading">
+          <h3>Hourly forecast</h3>
+        </div>
+
+        <div class="all-hour-cards">
+          <!-- Filled using JS -->
+        </div>
+      </div>
+
+      <div class="cities-forecast">
+        <div class="cities-forecast-heading">
+          <h3>Other large cities</h3>
+        </div>
+
+        <div class="cities-forecast-cards">
+          <div class="city-card">
+            <div class="cities-row-one">
+              <div class="row-one-text">
+                <p class="other-cities-county">US</p>
+
+                <p class="other-cities-region">New York</p>
+              </div>
+
+              <div class="row-one-icon">
+                <img src="" alt="weather icon for New York" />
+              </div>
+            </div>
+
+            <div class="cities-row-two">
+              <div class="row-two-text">
+                <p class="other-cities-weather-text">Mostly sunny</p>
+              </div>
+
+              <div class="row-two-num">
+                <p class="other-cities-temperature celsius">31°</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="city-card">
+            <div class="cities-row-one">
+              <div class="row-one-text">
+                <p class="other-cities-county">UK</p>
+
+                <p class="other-cities-region">London</p>
+              </div>
+
+              <div class="row-one-icon">
+                <img
+                  src="images/day/weather-icon-sunny.png"
+                  alt="weather icon for London"
+                />
+              </div>
+            </div>
+
+            <div class="cities-row-two">
+              <div class="row-two-text">
+                <p class="other-cities-weather-text">Mostly sunny</p>
+              </div>
+
+              <div class="row-two-num">
+                <p class="other-cities-temperature celsius">31°</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="city-card">
+            <div class="cities-row-one">
+              <div class="row-one-text">
+                <p class="other-cities-county">France</p>
+
+                <p class="other-cities-region">Paris</p>
+              </div>
+
+              <div class="row-one-icon">
+                <img src="" alt="weather icon for Paris" />
+              </div>
+            </div>
+
+            <div class="cities-row-two">
+              <div class="row-two-text">
+                <p class="other-cities-weather-text">Mostly sunny</p>
+              </div>
+
+              <div class="row-two-num">
+                <p class="other-cities-temperature celsius">31°</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="city-card">
+            <div class="cities-row-one">
+              <div class="row-one-text">
+                <p class="other-cities-county">Japan</p>
+
+                <p class="other-cities-region">Tokyo</p>
+              </div>
+
+              <div class="row-one-icon">
+                <img src="" alt="weather icon for Tokyo" />
+              </div>
+            </div>
+
+            <div class="cities-row-two">
+              <div class="row-two-text">
+                <p class="other-cities-weather-text">Mostly sunny</p>
+              </div>
+
+              <div class="row-two-num">
+                <p class="other-cities-temperature celsius">31°</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="city-card">
+            <div class="cities-row-one">
+              <div class="row-one-text">
+                <p class="other-cities-county">China</p>
+
+                <p class="other-cities-region">Hong Kong</p>
+              </div>
+
+              <div class="row-one-icon">
+                <img src="" alt="weather icon for Hong Kong" />
+              </div>
+            </div>
+
+            <div class="cities-row-two">
+              <div class="row-two-text">
+                <p class="other-cities-weather-text">Mostly sunny</p>
+              </div>
+
+              <div class="row-two-num">
+                <p class="other-cities-temperature celsius">31°</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="city-card">
+            <div class="cities-row-one">
+              <div class="row-one-text">
+                <p class="other-cities-county">US</p>
+
+                <p class="other-cities-region">Los Angeles</p>
+              </div>
+
+              <div class="row-one-icon">
+                <img src="" alt="weather icon for Los Angeles" />
+              </div>
+            </div>
+
+            <div class="cities-row-two">
+              <div class="row-two-text">
+                <p class="other-cities-weather-text">Mostly sunny</p>
+              </div>
+
+              <div class="row-two-num">
+                <p class="other-cities-temperature celsius">31°</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="settings-banner">
-        <div class="settings-heading">
-            <h3>Details</h3>
+      <div class="settings-heading">
+        <h3>Details</h3>
 
-            <i class="fa-solid fa-xmark"></i>
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+
+      <div class="settings-info">
+        <div class="settings-day settings-text">
+          <p>Monday</p>
         </div>
 
-        <div class="settings-info">
-            <div class="settings-day settings-text">
-                <p>Monday</p>
-            </div>
+        <div class="settings-date settings-text">
+          <p>4. 8. 2023</p>
+        </div>
 
-            <div class="settings-date settings-text">
-                <p>4. 8. 2023</p>
-            </div>
+        <div class="settings-position settings-text">
+          <p>Seattle, Australia</p>
+        </div>
 
-            <div class="settings-position settings-text">
-                <p>Seattle, Australia</p>
-            </div>
-
-            <div class="settings-switch">
-                <div class="toggle-button-cover-settings">
-                    <div class="button-cover">
-                      <div class="button r" id="button-9">
-                        <input type="checkbox" class="checkbox" />
-                        <div class="knobs">
-                          <span></span>
-                        </div>
-                        <div class="layer"></div>
-                      </div>
-                    </div>
+        <div class="settings-switch">
+          <div class="toggle-button-cover-settings">
+            <div class="button-cover">
+              <div class="button r" id="button-9">
+                <input type="checkbox" class="checkbox" />
+                <div class="knobs">
+                  <span></span>
                 </div>
+                <div class="layer"></div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
 
-        <div class="settings-logo">
-            <img src="images/v5.svg" alt="">
-        </div>
+      <div class="settings-logo">
+        <img src="images/v5.svg" alt="company logo" />
+      </div>
     </div>
 
     <div class="loader"></div>
-</body>
-<script type="module" src="main.js"></script>
+  </body>
+  <script type="module" src="main.js"></script>
 </html>

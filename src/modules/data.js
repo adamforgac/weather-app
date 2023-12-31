@@ -343,10 +343,11 @@ function getAllData() {
   }
 
   function setDomOverview(visibility, pressure, feelslike, wind) {
-    const visibilityNum = document.querySelector('.visibility-num');
-    const pressureNum = document.querySelector('.pressure-num');
-    const feelsLikeNum = document.querySelector('.feels-like-num');
-    const windSpeedNum = document.querySelector('.wind-speed-num');
+    const visibilityNum = document.querySelector('.visibility p:last-child');
+    console.log(visibilityNum);
+    const pressureNum = document.querySelector('.pressure p:last-child');
+    const feelsLikeNum = document.querySelector('.feels-like p:last-child');
+    const windSpeedNum = document.querySelector('.wind-speed p:last-child');
 
     const roundCelsius = Math.round(feelslike);
     const roundSpeed = Math.round(wind);
