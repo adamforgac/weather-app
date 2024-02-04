@@ -344,7 +344,6 @@ function getAllData() {
 
   function setDomOverview(visibility, pressure, feelslike, wind) {
     const visibilityNum = document.querySelector('.visibility p:last-child');
-    console.log(visibilityNum);
     const pressureNum = document.querySelector('.pressure p:last-child');
     const feelsLikeNum = document.querySelector('.feels-like p:last-child');
     const windSpeedNum = document.querySelector('.wind-speed p:last-child');
@@ -383,22 +382,24 @@ function getAllData() {
 
   function getTheIcon(text, sunsetHour, sunriseHour, currentTime) {
     const conditionTexts = [
-    // 0-1
+      // 0-3
       'clear',
       'sunny',
-      // 2
+      'day',
+      'night',
+      // 4
       'partly cloudy',
-      // 3-4
+      // 5-6
       'cloudy',
       'overcast',
-      // 5-10
+      // 7-12
       'mist',
       'fog',
       'haze',
       'smoke',
       'dust',
       'freezing fog',
-      // 11-21
+      // 13-24
       'light rain',
       'light showers of ice pellets',
       'moderate rain',
@@ -409,8 +410,9 @@ function getAllData() {
       'patchy light rain with thunder',
       'patchy rain possible',
       'patchy light rain',
+      'patchy rain nearby',
       'light freezing rain',
-      // 22-31
+      // 25-34
       'heavy rain',
       'moderate or heavy showers of ice pellets',
       'torrential rain shower',
@@ -421,7 +423,7 @@ function getAllData() {
       'tropical storm',
       'moderate or heavy rain with thunder',
       'moderate or heavy freezing rain',
-      // 32-49
+      // 35-52
       'light snow',
       'patchy light snow',
       'blowing snow',
@@ -440,7 +442,7 @@ function getAllData() {
       'freezing drizzle',
       'light sleet showers',
       'moderate sleet showers',
-      // 50-60
+      // 53-63
       'heavy snow',
       'moderate or heavy snow with thunder',
       'moderate or heavy snow showers',
@@ -452,17 +454,18 @@ function getAllData() {
       'moderate or heavy sleet',
       'blizzard',
       'heavy freezing drizzle',
-      // 61-64
+      // 64-67
       'thunderstorms',
       'thunder showers',
       'thundery outbreaks possible',
       'hurricane',
-      // 65
+      // 68
       'tornado',
     ];
 
     const weatherTextCustomized = text.toLowerCase();
-    const weatherIndex = conditionTexts.indexOf(weatherTextCustomized);
+    const weatherTextNoSpace = weatherTextCustomized.replace(/\s$/, '');
+    const weatherIndex = conditionTexts.indexOf(weatherTextNoSpace);
 
     let folder = 'day';
 
@@ -485,28 +488,50 @@ function getAllData() {
   }
 
   function collectImage(weatherIndex, folder) {
-    if (weatherIndex >= 0 && weatherIndex < 2) {
+    if (weatherIndex >= 0 && weatherIndex < 4) {
       return `images/${folder}/weather-icon-sunny.png`;
-    } if (weatherIndex === 2) {
+    }
+
+    if (weatherIndex === 4) {
       return `images/${folder}/weather-icon-partlyCloudy.png`;
-    } if (weatherIndex > 2 && weatherIndex < 5) {
+    }
+
+    if (weatherIndex > 4 && weatherIndex < 7) {
       return `images/${folder}/weather-icon-cloudy.png`;
-    } if (weatherIndex > 4 && weatherIndex < 11) {
+    }
+
+    if (weatherIndex > 6 && weatherIndex < 13) {
       return `images/${folder}/weather-icon-foggy.png`;
-    } if (weatherIndex > 10 && weatherIndex < 22) {
+    }
+
+    if (weatherIndex > 12 && weatherIndex < 25) {
       return `images/${folder}/weather-icon-lightRain.png`;
-    } if (weatherIndex > 21 && weatherIndex < 32) {
+    }
+
+    if (weatherIndex > 24 && weatherIndex < 35) {
       return `images/${folder}/weather-icon-heavyRain.png`;
-    } if (weatherIndex > 31 && weatherIndex < 50) {
+    }
+
+    if (weatherIndex > 34 && weatherIndex < 53) {
       return `images/${folder}/weather-icon-snow.png`;
-    } if (weatherIndex > 49 && weatherIndex < 61) {
+    }
+
+    if (weatherIndex > 52 && weatherIndex < 64) {
       return `images/${folder}/weather-icon-snow.png`;
-    } if (weatherIndex > 60 && weatherIndex < 65) {
+    }
+
+    if (weatherIndex > 63 && weatherIndex < 68) {
       return `images/${folder}/weather-icon-storm.png`;
-    } if (weatherIndex === 65) {
+    }
+
+    if (weatherIndex === 68) {
       return `images/${folder}/weather-icon-tornado.png`;
     }
-    alert('There was an error with weather conditions');
+
+    if (weatherIndex === -1) {
+      alert('Some weather icons were not found due to an API issue. THIS IS NOT MY FAULT, THE API COMPANY HAVE CHANGED SOMETHING AND THE DID NOT LET ME KNOW!!');
+      return 'images/fault/not-my-fault.png';
+    }
   }
 
   async function getAllLocations() {
